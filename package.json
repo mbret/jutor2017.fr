@@ -1,0 +1,27 @@
+{
+  "name": "jutor2017.fr.git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mbret@github.com/mbret/jutor2017.fr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbret/jutor2017.fr/issues"
+  },
+  "homepage": "https://github.com/mbret/jutor2017.fr#readme"
+}
