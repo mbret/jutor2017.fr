@@ -337,11 +337,15 @@ header .brand h1 {
   color: #ffffff;
   margin-top: 15px;
   margin-bottom: 15px;
+  background-color: rgba(92, 33, 54, 0.8);
 }
 .section-dates .dates-info .ceremony {
   text-transform: uppercase;
   font-size: 30px;
   letter-spacing: 5px;
+}
+.section-dates .dates-info .ceremony--md {
+  font-size: 27px;
 }
 .section-dates .dates-info .location {
   text-transform: uppercase;
@@ -351,14 +355,14 @@ header .brand h1 {
   padding-bottom: 5px;
 }
 .section-dates .dates-info .day-month {
-  font-size: 66px;
+  font-size: 50px;
   text-transform: uppercase;
   line-height: 1;
   margin-top: 10px;
 }
 .section-dates .dates-info .year {
   text-transform: uppercase;
-  letter-spacing: 15px;
+  /*letter-spacing: 15px;*/
   border-bottom: 1px dashed #ffffff;
   padding-bottom: 10px;
 }
