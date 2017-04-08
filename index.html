@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Lovin is a responsive bootstrap wedding invitation theme.">
+    <meta name="description" content="Mariage de Julie & Victor">
     <meta name="author" content="webmaddy">
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <title>Lovin - Responsive Bootstrap Wedding Theme</title>
+    <title>Mariage de Julie & Victor</title>
 
     <!-- Bootstrap -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,8 +77,8 @@
             <li><a class="scrollto" href="#story">Our Story</a></li>
             <li><a class="scrollto" href="#gallery">Gallery</a></li>
             <li><a class="scrollto" href="#registries">Registries</a></li>
+            <li><a class="scrollto" href="#contact">Contact</a></li>
             <li><a class="scrollto" href="#rsvp">RSVP</a></li>
-            <li><a class="scrollto" href="https://wrapbootstrap.com/theme/lovin-wedding-invitation-template-WB0J08195" target="_blank">Buy Now</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -294,34 +294,100 @@
     </script>
     <!-- Maps Section Ends Here-->
 
+    <div class="section section-gift" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center wow fadeInDown">Nous contacter</h1>
+            <p class="text-center wow fadeIn">
+              Julie MAYOT / 06.89.76.67.39 / juliemayot@hotmail.fr<br>
+              Victor BRET / 06.75.17.93.43 / vic.bret@yahoo.fr
+            </p>
+            <h2 class="text-center wow fadeIn">Equipe d’organisation :</h2>
+            <p class="text-center wow fadeIn">
+              Olivier-Charles GANZER / ganzeroc@gmail.com<br>
+              Bérengère HUSSON / lamouchedu92@hotmail.fr<br>
+              Antoine MOLLE / antoine_mp@hotmail.fr<br>
+              Pauline MAISONNASSE / mezopopo@hotmail.com<br>
+              Laura ZELMANSKI / lzelmanski@yahoo.fr<br>
+            </p>
+            <hr>
+            <p class="text-center wow fadeIn"><strong>N'oubliez pas de remplir le formulaire ci-dessous pour nous faire part de votre réponse</strong>.</p>
+          </div><!-- col-12 -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- section-gift -->
+
     <div class="section section-rspv" id="rsvp" style="background-image: url('assets/img/pw_maze_white.png');">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-          <h1 class="text-center wow fadeInDown">Are you attending?</h1>
+          <h1 class="text-center wow fadeInDown">Viendrez-vous ?</h1>
           <div class="sub-title text-center wow fadeInDown">We look forword to seeing you</div>
             <form id="rsvpForm" class="form wow fadeIn">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" name="guestName" id="guestName" class="form-control" placeholder="Your name *">
+                    <label>Prénom et nom</label>
+                    <input type="text" name="guestName" id="guestName" class="form-control">
                   </div>
                 </div><!-- col 6 -->
-                <div class="col-md-6">
+                <div class="col-md-12">
+                  <div class="checkbox"> <label> <input type="checkbox" name="guestName" id="present" checked> Je serais présent </label> </div>
                   <div class="form-group">
-                    <input type="email" name="guestEmail" id="guestEmail" class="form-control" placeholder="Your email *">
                   </div>
                 </div><!-- col 6 -->
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea name="guestMessage" id="guestMessage" class="form-control" placeholder="Your message *"></textarea>
+                    <label>Viendras-tu</label><br>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="alone" value="alone"> Seul
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="alone" value="together"> Accompagné
+                    </label>
+                  </div>
+                </div><!-- col 6 -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Prénom et nom du conjoint / du(es) enfant(s)</label>
+                    <input type="text" name="conjointName" id="conjointName" class="form-control">
+                  </div>
+                </div><!-- col 6 -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Intéressé par du covoiturage vers la Lorraine ? (Dates et lieu de départ)</label>
+                    <input type="text" name="carpooling" id="carpooling" class="form-control">
+                  </div>
+                </div><!-- col 6 -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Penses-tu utiliser le service de navette mis en place ?</label><br>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="helpCar" value="yes"> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="helpCar" value="no" checked> Non
+                    </label>
+                  </div>
+                </div><!-- col 6 -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Des suggestions de chanson à intégrer à la playlist ?</label>
+                    <textarea name="songs" id="songs" class="form-control" placeholder="René la taupe, ..."></textarea>
+                  </div>
+                </div><!-- col 12 -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="guestMessage">Message</label>
+                    <textarea name="guestMessage" id="guestMessage" class="form-control"></textarea>
                   </div>
                 </div><!-- col 12 -->
                 <div class="col-md-12">
                   <div id="submitMessage"></div>
                 </div>
                 <div class="col-md-12 text-center">
-                   <a href="javascript:void(0)" id="rsvp-form-submit" class="btn btn-lg btn-primary">I am attending</a>
+                   <a href="javascript:void(0)" id="rsvp-form-submit" class="btn btn-lg btn-primary">Envoyer ma réponse</a>
                 </div>
               </div><!-- row -->
             </form>
