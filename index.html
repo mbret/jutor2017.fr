@@ -211,19 +211,6 @@
       </div><!-- container -->
     </div><!-- section-dates -->
 
-    <!--<div class="section section-story" id="story">-->
-      <!--<div class="container">-->
-        <!--<h1 class="text-center wow fadeInDown">Notre histoire</h1>-->
-        <!--<div class="sub-title text-center wow fadeInDown">It was raining when we first met each other</div>-->
-        <!--<p class="text-center wow fadeIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
-        <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
-        <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
-        <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
-        <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
-        <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
-      <!--</div>&lt;!&ndash; container &ndash;&gt;-->
-    <!--</div>&lt;!&ndash; section-story &ndash;&gt;-->
-
     <!-- <div class="section section-gallery parallax-window" id="gallery" data-parallax="scroll" data-image-src="assets/img/gallery-bg.jpg"> -->
     <!--<div class="section section-gallery" id="gallery" data-parallax="scroll" data-image-src="assets/img/gallery-bg.jpg">-->
       <!--<div class="overlay overlay-light"></div>-->
@@ -266,6 +253,42 @@
         <!--</div>-->
       <!--</div>-->
     <!--</div>&lt;!&ndash; section-gallery &ndash;&gt;-->
+
+    <div class="section " id="info">
+        <div class="container">
+            <h1 class="text-center wow fadeInDown">Infos pratiques</h1>
+            <div class="sub-title text-center wow fadeInDown">
+                A venir
+            </div>
+            <!--<p class="wow fadeIn">-->
+                <!--Bonjour à tous !-->
+            <!--</p>-->
+            <!--<p class="wow fadeIn">-->
+                <!--Nous espérons que vous avez passé un bon week-end... et que vous avez bien bloqué votre week-end du 7 octobre prochain ! ;)-->
+                <!--Puisque nous n'avons pas encore eu l'occasion de tous vous recroiser depuis que nous avons fait nos petits 'Save the Date', on en profite pour vous envoyer ça en PJ.-->
+            <!--</p>-->
+            <!--<p class="wow fadeIn">-->
+                <!--La grande organisation suit son cours et vous devriez recevoir les faire-parts d'ici un petit mois.-->
+                <!--Vous y trouverez pas mal d'information (ainsi que sur le site web en préparation), mais nous avons voulu vous prévenir au plus tôt que nous avions négocié un tarif préférentiel dan un hôtel au sud de Metz (ZAC d'Augny) :-->
+                <!--<ul>-->
+                    <!--<li>Hôtel Kyriad 3 étoiles</li>-->
+                    <!--<li>A 15 minutes de la salle des fêtes et 10mn du centre de Metz (en voiture)</li>-->
+                    <!--<li>Nous allons proposer une navette qui fera le trajet salle <> Kyriad toutes les 30mn entre 01 et 04h (horaire et fréquence non-définitifs)</li>-->
+                    <!--<li>Ils proposent des chambres simple/double/twin au prix négocié de 55€ +1€ de taxe de séjour (+10€ / petit dej en option)</li>-->
+                <!--</ul>-->
+            <!--</p>-->
+            <!--<p class="wow fadeIn">-->
+                <!--Cela reste une option parmi d'autres, mais comme ça vous aurez l'info !-->
+                <!--Si ça vous intéresse, il faut les contacter au 03.87.52.28.70 ou designenzo.metz@kyriad.fr-->
+                <!--Il faut préciser que vous souhaitez profiter du tarif vu entre M. Bret et Beverly (55€) et normalement c'est bon.-->
+                <!--S'ils rechignent prévenez nous, on ira leur tirer les oreilles !-->
+            <!--</p>-->
+            <!--<p class="wow fadeIn">-->
+                <!--Je n'ai pas forcément les adresses mails à jour pour tout le monde, donc n'hésitez pas à en parler aux autres invités que ça pourrait intéresser pour vérifier qu'ils ont bien reçu l'info ;)-->
+                <!--<br>Une bien belle soirée à vous !-->
+            <!--</p>-->
+        </div><!-- container -->
+    </div><!-- section-story -->
 
     <div class="section " id="hobbies">
         <div class="container">
@@ -320,23 +343,21 @@
     <!-- Maps Section -->
     <div class="section section-map" id="map"> 
     </div><!-- section-map -->
-    <script>
-      function initMap() {
-        var uluru = {lat: 22.5463202, lng: 88.3608178};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru,
-          styles: [{"stylers":[{"hue":"#ff61a6"},{"visibility":"on"},{"invert_lightness":true},{"saturation":40},{"lightness":10}]}]
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap">
-    </script>
+    <!--<script>-->
+      <!--function initMap() {-->
+        <!--var uluru = {lat: 22.5463202, lng: 88.3608178};-->
+        <!--var map = new google.maps.Map(document.getElementById('map'), {-->
+          <!--zoom: 16,-->
+          <!--center: uluru,-->
+          <!--styles: [{"stylers":[{"hue":"#ff61a6"},{"visibility":"on"},{"invert_lightness":true},{"saturation":40},{"lightness":10}]}]-->
+        <!--});-->
+        <!--var marker = new google.maps.Marker({-->
+          <!--position: uluru,-->
+          <!--map: map-->
+        <!--});-->
+      <!--}-->
+    <!--</script>-->
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFe7tmKIwQDEW4-_muBXhP8lcJI6QjZKY&callback=initMap"></script>-->
     <!-- Maps Section Ends Here-->
 
     <div class="section section-gift" id="contact">
@@ -474,5 +495,6 @@
     <script src="assets/plugins/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
     <script src="assets/plugins/sscr.js"></script>
     <script src="assets/js/default.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFe7tmKIwQDEW4-_muBXhP8lcJI6QjZKY&callback=initMap"></script>
   </body>
 </html>
