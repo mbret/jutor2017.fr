@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mailgun-js": "^0.10.1"
   },
   "devDependencies": {},
   "scripts": {
