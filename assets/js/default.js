@@ -1,3 +1,54 @@
+/*
+ * Translated default messages for the jQuery validation plugin.
+ * Locale: FR (French; français)
+ */
+$.extend( $.validator.messages, {
+    required: "Ce champ est obligatoire.",
+    remote: "Veuillez corriger ce champ.",
+    email: "Veuillez fournir une adresse électronique valide.",
+    url: "Veuillez fournir une adresse URL valide.",
+    date: "Veuillez fournir une date valide.",
+    dateISO: "Veuillez fournir une date valide (ISO).",
+    number: "Veuillez fournir un numéro valide.",
+    digits: "Veuillez fournir seulement des chiffres.",
+    creditcard: "Veuillez fournir un numéro de carte de crédit valide.",
+    equalTo: "Veuillez fournir encore la même valeur.",
+    extension: "Veuillez fournir une valeur avec une extension valide.",
+    maxlength: $.validator.format( "Veuillez fournir au plus {0} caractères." ),
+    minlength: $.validator.format( "Veuillez fournir au moins {0} caractères." ),
+    rangelength: $.validator.format( "Veuillez fournir une valeur qui contient entre {0} et {1} caractères." ),
+    range: $.validator.format( "Veuillez fournir une valeur entre {0} et {1}." ),
+    max: $.validator.format( "Veuillez fournir une valeur inférieure ou égale à {0}." ),
+    min: $.validator.format( "Veuillez fournir une valeur supérieure ou égale à {0}." ),
+    step: $.validator.format( "Veuillez fournir une valeur multiple de {0}." ),
+    maxWords: $.validator.format( "Veuillez fournir au plus {0} mots." ),
+    minWords: $.validator.format( "Veuillez fournir au moins {0} mots." ),
+    rangeWords: $.validator.format( "Veuillez fournir entre {0} et {1} mots." ),
+    letterswithbasicpunc: "Veuillez fournir seulement des lettres et des signes de ponctuation.",
+    alphanumeric: "Veuillez fournir seulement des lettres, nombres, espaces et soulignages.",
+    lettersonly: "Veuillez fournir seulement des lettres.",
+    nowhitespace: "Veuillez ne pas inscrire d'espaces blancs.",
+    ziprange: "Veuillez fournir un code postal entre 902xx-xxxx et 905-xx-xxxx.",
+    integer: "Veuillez fournir un nombre non décimal qui est positif ou négatif.",
+    vinUS: "Veuillez fournir un numéro d'identification du véhicule (VIN).",
+    dateITA: "Veuillez fournir une date valide.",
+    time: "Veuillez fournir une heure valide entre 00:00 et 23:59.",
+    phoneUS: "Veuillez fournir un numéro de téléphone valide.",
+    phoneUK: "Veuillez fournir un numéro de téléphone valide.",
+    mobileUK: "Veuillez fournir un numéro de téléphone mobile valide.",
+    strippedminlength: $.validator.format( "Veuillez fournir au moins {0} caractères." ),
+    email2: "Veuillez fournir une adresse électronique valide.",
+    url2: "Veuillez fournir une adresse URL valide.",
+    creditcardtypes: "Veuillez fournir un numéro de carte de crédit valide.",
+    ipv4: "Veuillez fournir une adresse IP v4 valide.",
+    ipv6: "Veuillez fournir une adresse IP v6 valide.",
+    require_from_group: "Veuillez fournir au moins {0} de ces champs.",
+    nifES: "Veuillez fournir un numéro NIF valide.",
+    nieES: "Veuillez fournir un numéro NIE valide.",
+    cifES: "Veuillez fournir un numéro CIF valide.",
+    postalCodeCA: "Veuillez fournir un code postal valide."
+} );
+
 $(window).load(function() {
   // Animate loader off screen
   $(".se-pre-con").fadeOut("slow");
@@ -221,6 +272,12 @@ $("#rsvpForm").validate({
         },
         guestMessage: {
             required: false
+        },
+        present: {
+            // required: true
+        },
+        alone: {
+            required: true
         }
     }
 });
@@ -228,48 +285,67 @@ $("#rsvpForm").validate({
 $('#rsvp-form-submit').on('click',function(){
   if($("#rsvpForm").valid()) {
     var name = $("input#guestName").val();
-    var email = $("input#guestEmail").val();
+    var conjointName = $("input#conjointName").val();
+    // var email = $("input#guestEmail").val();
     var message = $("textarea#guestMessage").val();
-    var firstName = name;
+    var songs = $("textarea#songs").val();
+    var present = $("input#present").prop("checked");
+    var carpooling = $("input#carpooling").val();
+    var alone = $("input[name=alone]:checked").val();
+    var helpCar = $("input[name=helpCar]:checked").val();
+    var data = {
+        guestName: name,
+        present: present,
+        // email: email,
+        message: message,
+        alone: alone,
+        songs: songs,
+        helpCar: helpCar,
+        carpooling: carpooling,
+        conjointName: conjointName
+    };
 
-    if (firstName.indexOf(' ') >= 0) {
-      firstName = name.split(' ').slice(0, -1).join(' ');
-    }
+    console.log("data", data);
+
     $.ajax({
       url: window.APP_CONFIG.apiHost + "/mail",
       type: "POST",
-      data: {
-        name: name,
-        email: email,
-        message: message
-      },
-      success: function(response){
-        console.log(response);
-        if(response == 'success')
+      data: data,
+        error: function(err) {
+            console.error(err.responseJSON);
+            onError();
+        },
+      success: function(response, textStatus){
+        console.log("ok", response, textStatus);
+        if(textStatus === "success")
         {
           $('#submitMessage').html("<div class='alert alert-success'>");
           $('#submitMessage > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#submitMessage > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
+            .append("<strong>Le message a été correctement envoyé.</strong>");
           $('#submitMessage > .alert-success')
             .append('</div>');
-          $('#submitMessage').delay(3000).fadeOut();
-          //clear all fields
+          $('#submitMessage').delay(5000).fadeOut();
+          // clear all fields
           $('#rsvpForm').trigger("reset");
         }
         else{
-          $('#submitMessage').html("<div class='alert alert-danger'>");
-          $('#submitMessage > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#submitMessage > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-          $('#submitMessage > .alert-danger').append('</div>');
-          $('#submitMessage').delay(3000).fadeOut();
-          //clear all fields
-          $('#rsvpForm').trigger("reset");
+          onError();
         }
       }
-    })
+    });
+
+    function onError() {
+        $('#submitMessage').html("<div class='alert alert-danger'>");
+        $('#submitMessage > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+        $('#submitMessage > .alert-danger').append("<strong>Désolé une erreur est survenue, veuillez réessayer.</strong>");
+        $('#submitMessage > .alert-danger').append('</div>');
+        $('#submitMessage').delay(3000).fadeOut();
+        //clear all fields
+        $('#rsvpForm').trigger("reset");
+    }
   }
 });
 

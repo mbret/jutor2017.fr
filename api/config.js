@@ -3,6 +3,6 @@ module.exports = Object.assign({
     // from
     contactMail: 'bret.maxime@gmail.com',
     // To retrieve mail from users
-    recipientMail: 'bret.maxime@gmail.com',
+    recipientMail: 'vic.bret@yahoo.fr',
     mailgunApiKey: ""
 }, require("./config.local"));
