@@ -350,9 +350,10 @@ header .brand h1 {
   /*letter-spacing: 5px;*/
 }
 .section-dates .dates-info .sub-box {
-  border: 3px solid rgba(57, 24, 90, 0.8);
+  /*border: 3px solid rgba(57, 24, 90, 0.8);*/
   margin: 10px;
-  background-color: rgba(78, 31, 103, 0.8);
+  /*background-color: rgba(78, 31, 103, 0.8);*/
+  background-color: rgba(115, 41, 67, 0.8);
   padding: 15px;
 }
 .section-dates .dates-info .vertical {
