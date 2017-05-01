@@ -335,14 +335,25 @@ header .brand h1 {
 .section-dates .dates-info {
   z-index: 99;
   border: 3px solid #ffffff;
-  text-align: center;
+  /*text-align: center;*/
   padding: 15px;
   color: #ffffff;
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: rgba(125, 39, 81, 0.8);
-  min-height: 320px;
-  line-height:320px;
+  /*min-height: 320px;*/
+  /*line-height:320px;*/
+}
+.section-dates .dates-info .date {
+  text-transform: uppercase;
+  font-size: 20px;
+  /*letter-spacing: 5px;*/
+}
+.section-dates .dates-info .sub-box {
+  border: 3px solid rgba(57, 24, 90, 0.8);
+  margin: 10px;
+  background-color: rgba(78, 31, 103, 0.8);
+  padding: 15px;
 }
 .section-dates .dates-info .vertical {
   vertical-align:middle;
@@ -380,6 +391,17 @@ header .brand h1 {
   font-size: 46px;
   text-transform: uppercase;
   line-height: 1;
+  margin-top: 10px;
+}
+.section-dates .dates-info .location {
+  border-bottom: 0;
+}
+.section-dates .dates-info .sub-box .location {
+  margin-bottom: 20px;
+}
+.section-dates .dates-info .sub-box .time {
+  font-size: 25px;
+  text-align: center;
   margin-top: 10px;
 }
 /* media queries */
