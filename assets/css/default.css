@@ -340,7 +340,7 @@ header .brand h1 {
   color: #ffffff;
   margin-top: 15px;
   margin-bottom: 15px;
-  background-color: rgba(125, 39, 81, 0.8);
+  background-color: rgba(125, 39, 81, 0.6);
   /*min-height: 320px;*/
   /*line-height:320px;*/
 }
@@ -351,7 +351,7 @@ header .brand h1 {
 }
 .section-dates .dates-info .sub-box {
   /*border: 3px solid rgba(57, 24, 90, 0.8);*/
-  margin: 10px;
+  margin: 20px;
   /*background-color: rgba(78, 31, 103, 0.8);*/
   background-color: rgba(115, 41, 67, 0.8);
   padding: 15px;
@@ -503,4 +503,19 @@ textarea.error {
 }
 .copyright a {
   color: #fff;
+}
+
+.main-header {
+  background-image: url('../img/header-2048.png');
+  height: 400px;
+}
+@media only screen and (max-width: 480px) {
+  .main-header {
+    background-image: url('../img/header-640.png');
+  }
+}
+@media only screen and (max-width: 900px) {
+  .main-header {
+    background-image: url('../img/header-1450.png');
+  }
 }
